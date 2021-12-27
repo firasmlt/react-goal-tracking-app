@@ -34,11 +34,14 @@ const App = () => {
       <CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} />
     );
   }
+  const clearGoals = () => {
+    setCourseGoals([]);
+  };
 
   return (
     <div>
       <section id="goal-form">
-        <CourseInput onAddGoal={addGoalHandler} />
+        <CourseInput onAddGoal={addGoalHandler} clearGoals={clearGoals} />
       </section>
       <section id="goals">{content}</section>
     </div>

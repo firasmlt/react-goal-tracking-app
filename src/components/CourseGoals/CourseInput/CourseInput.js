@@ -35,6 +35,7 @@ const CourseInput = (props) => {
         />
       </div>
       <Button type="submit">Add Goal</Button>
+      <Button clearGoals={props.clearGoals}>clear Goals</Button>
     </form>
   );
 };
